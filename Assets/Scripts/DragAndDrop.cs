@@ -12,6 +12,7 @@ public class DragAndDrop : MonoBehaviour
     void Start()
     {
         col = GetComponent<Collider2D>();
+		Debug.Log("start");
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class DragAndDrop : MonoBehaviour
 			if (touch.phase == TouchPhase.Ended)
 			{
 				moveAllowed = false;
+				Debug.Log("ended");
 			}
 		}
     }
