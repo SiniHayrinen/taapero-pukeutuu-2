@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class FoodBehaviour : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        Debug.Log("hit detected");
-    }
+    public static int foodEaten;
 }
