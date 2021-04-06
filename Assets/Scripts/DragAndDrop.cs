@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class DragAndDrop : MonoBehaviour
 {
@@ -55,8 +57,25 @@ public class DragAndDrop : MonoBehaviour
 
 					FoodBehaviour.foodEaten += 1;
 					Debug.Log("foodEaten is " + FoodBehaviour.foodEaten);
+
+					// Change the scene when every piece is eaten
+					if (FoodBehaviour.foodEaten >= 8) {
+						// 
+						DOVirtual.DelayedCall(1, SleepyCat);
+					}
 				}
 			}
 		}
     }
+
+	void SleepyCat() {
+		//kavelyUlos.Play();
+		//KokoHahmoTransform.DOMoveX(15, 4, false);
+		DOVirtual.DelayedCall(1, GoToNextScene);
+	}
+
+	void GoToNextScene()
+	{
+		SceneManager.LoadScene("VaatepeliKesa");
+	}
 }
