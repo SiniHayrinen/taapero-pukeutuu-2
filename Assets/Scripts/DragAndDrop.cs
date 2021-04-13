@@ -11,11 +11,13 @@ public class DragAndDrop : MonoBehaviour
 	Collider2D col;
 	public Transform goalPlace;
 	public AudioSource crunch;
+	public Animator anim;
 	
     // Start is called before the first frame update
     void Start()
     {
         col = GetComponent<Collider2D>();
+		FoodBehaviour.foodEaten = 0;
     }
 
     // Update is called once per frame
@@ -54,6 +56,7 @@ public class DragAndDrop : MonoBehaviour
 					this.gameObject.SetActive(false);
 
 					crunch.Play();
+					anim.SetTrigger("StartsToEat");
 
 					FoodBehaviour.foodEaten += 1;
 					Debug.Log("foodEaten is " + FoodBehaviour.foodEaten);
