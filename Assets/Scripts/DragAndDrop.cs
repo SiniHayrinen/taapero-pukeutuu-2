@@ -12,6 +12,7 @@ public class DragAndDrop : MonoBehaviour
 	public Transform goalPlace;
 	public AudioSource crunch;
 	public Animator anim;
+	public Animator animSleep;
 	
     // Start is called before the first frame update
     void Start()
@@ -72,8 +73,8 @@ public class DragAndDrop : MonoBehaviour
     }
 
 	void SleepyCat() {
-		//kavelyUlos.Play();
-		//KokoHahmoTransform.DOMoveX(15, 4, false);
+		//cat_sleeping.Play();
+		animSleep.SetTrigger("CatSleeps");
 		DOVirtual.DelayedCall(1, GoToNextScene);
 	}
 
