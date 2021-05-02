@@ -28,7 +28,7 @@ public class Ikkuna : MonoBehaviour
 		
 		if (scene.name == "FeedTheCat")
 		{
-			SceneManager.LoadScene("Vaatepeli");
+			SceneManager.LoadScene("VaatepeliKesa");
 		}
 	}
 
