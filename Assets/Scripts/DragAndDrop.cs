@@ -11,6 +11,7 @@ public class DragAndDrop : MonoBehaviour
 	Collider2D col;
 	public Transform goalPlace;
 	public AudioSource crunch;
+	public AudioSource purr;
 	public Animator anim;
 	public Animator animSleep;
 	
@@ -74,8 +75,9 @@ public class DragAndDrop : MonoBehaviour
 
 	void SleepyCat() {
 		//cat_sleeping.Play();
+		purr.Play();
 		animSleep.SetTrigger("CatSleeps");
-		DOVirtual.DelayedCall(1, GoToNextScene);
+		DOVirtual.DelayedCall(3, GoToNextScene);
 	}
 
 	void GoToNextScene()
