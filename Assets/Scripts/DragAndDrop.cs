@@ -52,7 +52,7 @@ public class DragAndDrop : MonoBehaviour
 				moveAllowed = false;
 
 				// If the cat food is on top of cat's face
-				if (Mathf.Abs(transform.position.x - goalPlace.position.x) <= 1.5f && Mathf.Abs(transform.position.y - goalPlace.position.y) <= 1.5f) 
+				if (Mathf.Abs(transform.position.x - goalPlace.position.x) <= 2.5f && Mathf.Abs(transform.position.y - goalPlace.position.y) <= 2.5f) 
 				{
 					// Hides the cat food that was eaten
 					this.gameObject.SetActive(false);
